@@ -6,7 +6,7 @@
 /*   By: cluby <cluby@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 05:43:41 by cluby             #+#    #+#             */
-/*   Updated: 2024/10/06 12:06:27 by cluby            ###   ########.fr       */
+/*   Updated: 2024/10/10 17:51:59 by cluby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	redirections(t_token **tokens, const char *prompt, int *i)
 	{
 		if (prompt[*i + 1] && prompt[*i + 1] == '<')
 		{
-			t_token_add_back(tokens, t_token_new("<<", HERE_DOC));
+			t_token_add_back(tokens, t_token_new("<<", HEREDOC));
 			(*i)++;
 		}
 		else
